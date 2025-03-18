@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="805.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RepresentacionController">
+   <children>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="659.0" style="-fx-background-color: black;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: lightblue;" text="Decimal a IEEE">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="663.0" style="-fx-background-color: D8F5F2;">
+                     <children>
+                        <HBox layoutX="18.0" layoutY="207.0" prefHeight="46.0" prefWidth="778.0">
+                           <children>
+                              <HBox prefHeight="46.0" prefWidth="51.0" style="-fx-background-color: pink;">
+                                 <children>
+                                    <Label fx:id="lblSigno1" alignment="CENTER" prefHeight="46.0" prefWidth="49.0">
+                                       <font>
+                                          <Font name="Monospaced Regular" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="46.0" prefWidth="140.0" style="-fx-background-color: #C4C4FF;">
+                                 <children>
+                                    <Label fx:id="lblExponente1" alignment="CENTER" prefHeight="46.0" prefWidth="142.0">
+                                       <font>
+                                          <Font name="Monospaced Regular" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="46.0" prefWidth="568.0" style="-fx-background-color: C8FFC8;">
+                                 <children>
+                                    <Label fx:id="lblMantisa1" alignment="CENTER" prefHeight="46.0" prefWidth="570.0">
+                                       <font>
+                                          <Font name="Monospaced Regular" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="302.0" layoutY="47.0" prefHeight="26.0" prefWidth="210.0" spacing="10.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="86.0" text="Numero de bits:">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="cBoxBitsD" prefHeight="25.0" prefWidth="109.0" promptText="32 bits" style="-fx-background-color: white;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="235.0" layoutY="73.0" prefHeight="76.0" prefWidth="336.0" spacing="10.0">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="50.0" text="Numero:" />
+                              <TextField fx:id="txtNumero1" prefHeight="25.0" prefWidth="274.0" promptText="Digite solo numeros, no funcionara con letras" style="-fx-background-color: white;" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="cmdDecToIEEE1" alignment="CENTER" layoutX="342.0" layoutY="149.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: lightblue;" text="Calcular" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="253.0" text="Signo">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="253.0" text="Exponente">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="458.0" layoutY="253.0" text="Mantisa">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab style="-fx-background-color: pink;" text="IEEE a decimal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="663.0" style="-fx-background-color: D8F5F2;">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="87.0" prefHeight="46.0" prefWidth="778.0">
+                           <children>
+                              <HBox prefHeight="46.0" prefWidth="51.0" style="-fx-background-color: pink;">
+                                 <children>
+                                    <TextField fx:id="txtSigno" prefHeight="53.0" prefWidth="52.0" style="-fx-background-color: pink;">
+                                       <font>
+                                          <Font name="Monospaced Regular" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="46.0" prefWidth="182.0" style="-fx-background-color: #C4C4FF;">
+                                 <children>
+                                    <TextField fx:id="txtExponente" prefHeight="46.0" prefWidth="182.0" style="-fx-background-color: #C4C4FF;">
+                                       <font>
+                                          <Font name="Monospaced Regular" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="46.0" prefWidth="549.0" style="-fx-background-color: C8FFC8;">
+                                 <children>
+                                    <TextField fx:id="txtMantisa" prefHeight="46.0" prefWidth="548.0" style="-fx-background-color: C8FFC8;">
+                                       <font>
+                                          <Font name="Monospaced Regular" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="261.0" layoutY="47.0" prefHeight="26.0" prefWidth="210.0" spacing="10.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="86.0" text="Numero de bits:">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="cBoxBitsI" prefHeight="25.0" prefWidth="109.0" promptText="32 bits" style="-fx-background-color: white;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="37.0" layoutY="198.0" prefHeight="76.0" prefWidth="755.0" spacing="10.0">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="50.0" text="Numero:" />
+                              <TextField fx:id="txtNumero" prefHeight="25.0" prefWidth="687.0" style="-fx-background-color: white;" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="cmdIEEEtoDec" alignment="CENTER" layoutX="301.0" layoutY="149.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: lightblue;" text="Convertir" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>
